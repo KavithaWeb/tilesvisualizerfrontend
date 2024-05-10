@@ -1,0 +1,11 @@
+body{
+  margin: 0;
+  padding : 0;
+}
+.App {
+  font-family: ProximaNova,arial,Helvetica Neue,sans-serif;
+}
+
+.App #commonNavbar{
+  display: none;
+}

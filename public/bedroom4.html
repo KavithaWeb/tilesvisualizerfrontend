@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Three Js Template</title>
+  <link rel="stylesheet" href="./css/visualizerpagestyle.css">
+  <script type="importmap">
+    {
+      "imports": {
+          "three": "/three/build/three.module.js"
+      }
+  }
+    </script>
+
+  <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
+</head>
+
+<body onload="loading1()">
+
+
+  <!-- ============================================ FRONT LOADING ============================================ -->
+
+
+    <div id="loaderfront1">
+    <div id="loader">
+    <!-- <div class="loading status">
+      <span><img
+        src="https://jabez-tiles.s3.ap-south-1.amazonaws.com/riyadvilogo.png" width="70px" height="70px"></span>
+      <span>R</span>
+      <span>I</span>
+      <span>Y</span>
+      <span>A</span>
+      <span>D</span>
+      <span>V</span>
+      <span>I</span>
+      <span class="load">3</span>
+      <span class="load">6</span>
+      <span class="load">0</span>
+      <span class="load">°</span>
+
+    </div> -->
+
+    <div class="status">
+      <span><img src="https://jabez-tiles.s3.ap-south-1.amazonaws.com/riyadvilogo.png" width="80px"
+          height="80px"></span>
+
+    </div>
+    <div style="color: #B8860B; margin-top: 200px;   font-family: sans-serif;
+    font-size: 18px;
+    text-shadow: 0 0 20px #B8860B;
+    letter-spacing: 3px; font-weight: bold;"><span style="color: #ffffff;">RIYADVI</span>360°</div>
+
+  </div>
+  </div>
+
+
+  <!-- ============================================ TILES NAV BAR ============================================ -->
+
+
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <h6 class="tilesnavbar">
+      TILES DESIGN</h6>
+      <div class="position-absolute top-0" style=" width: 100%;">
+        <button id="delchoose" style="padding: 0px 15px; float: right; margin-right: 70px; background-color: #818181; color: white; border: none; border-radius: 2px;" onclick="deletestopImages()">
+            <i class="bi bi-trash"></i>
+            Delete
+        </button>
+        <button id="selectdel"  style="padding: 0px 15px; float: right; margin-right: 70px; background-color: #818181;  color: white; border: none; border-radius: 2px;" onclick="deleteSelectedImages()">
+            <i class="bi bi-trash"></i>
+            Delete Selected
+        </button>
+        <button id="closedel" style="padding: 0px 15px; float: right; margin-right: 20px; background-color: #818181;  color: white; border: none; border-radius: 2px;" onclick="deletecancelImages()">
+            <i class="fa fa-close"></i>
+            Cancel
+        </button>
+        </div>
+    <div id="tiles"></div>
+    <div class="position-absolute" style=" width: 100%; text-align:center ;">
+        <button id="vvv"  class="button1" style="padding: 0px 12px !important; text-align: center; color: white; background-color:#818181 !important; font-weight: 600; margin-bottom: 20px !important; border: none; border-radius: 2px;">
+            <i class="bi bi-arrow-right"></i>
+            Next
+        </button>
+      
+    </div>
+ 
+  </div>
+
+
+  <!-- ============================================ BUTTONS ============================================ -->
+
+
+  <!-- <div id="tilesmenu" >
+    <div style=" position: absolute; width: 100%; top: 0; right: 5px;">
+      <div style=" float: right;">
+            <button class="btn btn-primary" style=" padding: 4px 25px; background-color: black; border: 2px solid #B8860B; border-radius:1px !important; display: block; margin-top: 5px;" onclick="logoutbtn()">
+              <span id="logout-btn-loader" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+              <i id="logout-icon" class="bi bi-box-arrow-right" style="color: rgb(255, 255, 255); padding-right: 5px;"></i>Logout      
+            </button>
+       
+            <button class="btn btn-primary" style=" padding: 4px 33px;   background-color: black; border: 2px solid #B8860B; border-radius:1px !important;  display: block; margin-top: 5px;" onclick="back2()">
+              <span id="logout-btn-loader" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+              <i class="bi bi-arrow-return-left" style="color: rgb(255, 255, 255); padding-right: 5px;"></i>Back
+            </button>
+       
+              <button class="btn btn-primary" value="1" id="middletile" style=" padding: 4px 15px;  background-color: black; border: 2px solid #B8860B; border-radius:1px !important;  display: block; margin-top: 5px;">
+                <img src="https://jabez-tiles.s3.ap-south-1.amazonaws.com/click-2385.svg" width="20px" height="20px">
+                 Wall Tiles
+              </button>
+           
+              <button class="btn btn-primary" value="0" id="floortile" style=" padding: 4px 12px;   background-color: black; border: 2px solid #B8860B; border-radius:1px !important;  display: block; margin-top: 5px;">
+                <img src="https://jabez-tiles.s3.ap-south-1.amazonaws.com/click-2385.svg" width="20px" height="20px"> Floor Tiles
+              </button>
+      </div>
+          </div>
+    <div class="screen" style="margin-bottom: 5px;  position: absolute; width: 100%; bottom:0; margin-top: 315px;">
+      <button id="screenshot" style="padding: 1px 10px !important;  position: relative;
+      z-index: 1; float: left;  margin-left: 190px; background-color: black; border: 2px solid #B8860B;"><i class="bi bi-download" style="font-size: 30px; color: aliceblue;"></i></button>
+    </div>
+    <div class="print" style="margin-bottom: 5px; position: absolute; width: 100%; bottom:0; margin-top: 315px;">
+      <button id="printer" style="padding: 1px 10px !important;  position: relative;
+      z-index: 1; float: left;  margin-left: 130px; background-color: black; border: 2px solid #B8860B;"><i class="bi bi-printer" style="font-size: 30px; color: aliceblue;"></i></button>
+    </div>
+    <div class="zoomin" style="margin-bottom: 5px; position: absolute; width: 100%; bottom:0; margin-top: 315px;">
+      <button id="zoom-in-button"  style="padding: 1px 10px !important;  position: relative;
+      z-index: 1; float: left;  margin-left: 70px; background-color: black; border: 2px solid #B8860B;"><i class="bi bi-zoom-in" style="font-size: 30px; color: aliceblue;" ></i></button>
+      </div>
+      <div class="zoomout" style="margin-bottom: 5px; position: absolute;  width: 100%;  bottom:0; margin-top: 315px;">
+        <button id="zoom-out-button"  style="padding: 1px 10px !important;  position: relative;
+        z-index: 1; float: left; margin-left: 10px; background-color: black; border: 2px solid #B8860B;"><i class="bi bi-zoom-out" style="font-size: 30px; color: aliceblue;" ></i></button>
+        </div>
+      <div class="screenfull" style="margin-bottom: 5px; position: absolute; width: 100%; bottom:0; margin-top: 315px;">
+        <button id="fullscreen-btn" style="padding: 1px 10px !important;  position: relative;
+        z-index: 1; float: left;  margin-left: 250px; background-color: black; border: 2px solid #B8860B;"><i class="bi bi-fullscreen" style="font-size: 30px; color: aliceblue;"></i></button>
+      </div>
+  </div> -->
+
+
+  
+  <div id="tilesmenu">
+    
+    <button class="btn btn-primary" value="1" id="middletile"
+      style=" border: none !important;   position: fixed; padding: 3px 8px;
+      z-index: 4;
+      top: 5px;
+      right: 5px;
+      background-color: #ffffff;
+      overflow-x: hidden;
+   color: rgb(0, 0, 0); font-weight: 700;
+     ">
+      <img src="https://jabez-tiles.s3.ap-south-1.amazonaws.com/click-2385.svg" width="25px" height="25px">
+      Wall
+    </button>
+  
+    <button class="btn btn-primary" value="0" id="floortile"
+      style=" border: none !important;  position: fixed;padding: 3px 8px;
+      z-index: 4;
+      top: 5px;
+      right: 88px;
+      background-color: #ffffff;
+      overflow-x: hidden;
+   color: rgb(0, 0, 0); font-weight: 700;
+     ">
+      <img src="https://jabez-tiles.s3.ap-south-1.amazonaws.com/click-2385.svg" width="25px" height="25px"> Floor
+    </button>
+  
+  
+  
+  
+  
+  
+    </div>
+  
+  
+  
+    <div id="mySidenav2" class="sidenav2">
+  
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav2()">&times;</a>
+  
+  
+      <a href="#" id="screenshot" style="text-decoration: none !important; 
+      z-index: 1; color: rgb(0, 0, 0); "><i class="bi bi-download"
+          style="font-size: 25px; font-weight: 800; padding:8px; color: rgb(0, 0, 0);"></i></a>
+  
+  
+  
+      <a href="#" id="printer" style="text-decoration: none !important; 
+      z-index: 1;  color: rgb(0, 0, 0); "><i class="bi bi-printer"
+          style="font-size: 25px; font-weight: 800; padding:8px; color: rgb(0, 0, 0);"></i> </a>
+  
+  
+      <a href="#" id="zoom-in-button" style="text-decoration: none !important; 
+      z-index: 1;  color: rgb(0, 0, 0); "><i class="bi bi-zoom-in"
+          style="font-size: 25px; font-weight: 800; padding:8px; color: rgb(0, 0, 0);"></i></a>
+  
+  
+      <a href="#" id="zoom-out-button" style="text-decoration: none !important; 
+        z-index: 1; color: rgb(0, 0, 0); "><i class="bi bi-zoom-out"
+          style="font-size: 25px; font-weight: 800; padding:8px; color: rgb(0, 0, 0);"></i></a>
+  
+  
+      <a href="#" id="fullscreen-btn" style="text-decoration: none !important; 
+        z-index: 1;  color: rgb(0, 0, 0); "><i class="bi bi-fullscreen"
+          style="font-size: 25px; font-weight: 800; padding:8px; color: rgb(0, 0, 0);"></i></a>
+  
+  
+      <a href="#" id="changeLayoutsButton" type="a" style="text-decoration: none !important; 
+        z-index: 1;  color: rgb(0, 0, 0); "><i class="bi bi-layout-split"
+          style="font-size: 25px; font-weight: 800; padding:8px; color: rgb(0, 0, 0);"></i>
+      </a>
+<!--   
+      <a href="#" id="rotate45Button" type="a" style="text-decoration: none !important; 
+        z-index: 1;  color: rgb(0, 0, 0); "><i class="bi bi-arrow-counterclockwise"
+          style="font-size: 25px; font-weight: 800; padding:8px; color: rgb(0, 0, 0);"></i></a> -->
+  
+  
+   
+          <div class="dropdown" style="padding-left: 8px;">
+            <button id="changeLayoutButton" type="button" class="dropdown-toggle"
+            style=" border: none !important; color:black; background:transparent; font-size: 16px !important;  display: block;"
+            data-toggle="dropdown"> <i class="bi bi-layout-split"
+              style="font-size: 25px; padding:8px; color: rgb(0, 0, 0);"></i>
+          </button>
+            <div class="dropdown-content">
+              <input id="repeatWidth"  type="number" style="padding: 10px;" value="3" step="1">
+              <input id="repeatHeight"  type="number" style="padding: 10px;" value="5" step="1">
+      
+            </div>
+          </div>
+          
+  
+  
+          <div class="dropdown" style="padding-left: 8px;">
+            <button id="changeLayoutButton" type="button" class="dropdown-toggle"
+            style=" border: none !important; color:black; background:transparent; font-size: 16px !important;  display: block;"
+            data-toggle="dropdown"> <i class="bi bi-layout-split"
+              style="font-size: 25px; padding:8px; color: rgb(0, 0, 0);"></i>
+          </button>
+            <div class="dropdown-content">
+              <input id="gapInput" type="number" style="padding:10px !important;" value="0.003" step="0.001">
+      
+            </div>
+          </div>
+     
+  
+          <a class="dropdown" style="padding-left: 8px;">
+            <button id="Rotation" type="button" class="dropdown-toggle"
+            style=" border: none !important; color:black; background:transparent; font-size: 16px !important;  display: block;"
+            data-toggle="dropdown"> <i class="bi bi-arrow-counterclockwise"
+              style="font-size: 25px; padding:8px; color: rgb(0, 0, 0);"></i>
+              
+          </button>
+            <div class="dropdown-content">
+              <button type="button" id="rotate45Button">Rotate 45°</button>
+              <button type="button" id="rotate90Button">Rotate 90°</button>
+              <button type="button" id="rotate135Button">Rotate 135°</button>
+              <button type="button" id="rotate180Button">Rotate 180°</button>
+      
+            </div>
+          </a>
+  
+    </div>
+   
+  <span id="open" style="font-size:20px; display: none; cursor:pointer; font-weight: 700; position: fixed; z-index: 1; top: 0; left: 0; margin-top: 5px; margin-left:5px ; color: rgb(0, 0, 0); user-select: none; background-color: #ffffff; padding: 5px 15px;"
+          onclick="openNav2()">&#9776;</span>
+  
+
+
+  <!-- ============================================ TILES SMALL NAV BAR ============================================ -->
+
+
+  <div id="img3" style=" display: none; position: absolute; z-index: 1;  width: 100%; " onclick="openNav()"></div>
+
+
+  <!-- ============================================ 3D CANVAS ============================================ -->
+
+
+  <canvas class="bedroom4" id="bedroom4" style="display: none;"></canvas>
+
+
+  <!-- ============================================ TILES LOADING ============================================ -->
+
+
+  <div class="container" id="logout1-btn-loader">
+    <svg width="100" height="100" viewBox="0 0 300 300">
+      <defs>
+        <linearGradient id="gradient-fill" gradientUnits="userSpaceOnUse" x1="0" y1="300" x2="300" y2="0">
+          <stop offset="0%">
+            <animate attributeName="stop-color" values="#00E06B;#CB0255;#00E06B" dur="5s" repeatCount="indefinite" />
+          </stop>
+          <stop offset="100%">
+            <animate attributeName="stop-color" values="#04AFC8;#8904C5;#04AFC8" dur="8s" repeatCount="indefinite" />
+          </stop>
+        </linearGradient>
+        <clipPath id="clip">
+          <rect class="square s1" x="0" y="0" rx="12" ry="12" height="90" width="90"></rect>
+          <rect class="square s2" x="100" y="0" rx="12" ry="12" height="90" width="90"></rect>
+          <rect class="square s3" x="200" y="0" rx="12" ry="12" height="90" width="90"></rect>
+          <rect class="square s4" x="0" y="100" rx="12" ry="12" height="90" width="90"></rect>
+          <rect class="square s5" x="200" y="100" rx="12" ry="12" height="90" width="90"></rect>
+          <rect class="square s6" x="0" y="200" rx="12" ry="12" height="90" width="90"></rect>
+          <rect class="square s7" x="100" y="200" rx="12" ry="12" height="90" width="90"></rect>
+        </clipPath>
+      </defs>
+      <rect class="gradient" clip-path="url('#clip')" height="300" width="300"></rect>
+    </svg>
+  </div>
+
+
+  <!-- ============================================ BACK BUTTON ============================================ -->
+
+
+  <script>
+    function back2() {
+
+      window.location = "./visualizer.html"
+
+    }
+  </script>
+
+
+  <!-- ============================================ FRONT LOADING ============================================ -->
+
+
+  <script>
+ function loading1() {
+      document.getElementById("loaderfront1").style.display = "block";
+      document.getElementById("mySidenav2").style.display = "none";
+      document.getElementById("open").style.display = "none";
+      document.getElementById("tilesmenu").style.display = "none";
+      setTimeout(myGreeting1, 5000);
+      function myGreeting1() {
+        document.getElementById("open").style.display = "block";
+        document.getElementById("tilesmenu").style.display = "block";
+        document.getElementById("mySidenav2").style.display = "block";
+        document.getElementById("loaderfront1").style.display = "none";
+        document.getElementById("bedroom4").style.display = "block";
+      }
+    }
+
+    function openNav2() {
+      document.getElementById("mySidenav2").style.width = "70px";
+    }
+
+    function closeNav2() {
+      document.getElementById("mySidenav2").style.width = "0";
+    }
+  </script>
+
+
+
+  <script src="./BedroomJavascript/bedroomhtml.js"></script>
+  <script type="module" src="./BedroomJavascript/bedroom4.js"></script>
+
+
+</body>
+
+
+</html>

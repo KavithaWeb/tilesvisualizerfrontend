@@ -1,0 +1,77 @@
+<div class="container" style="background-color: #fff">
+  <div class="row py-5 px-3">
+    <div class="col-lg-4">
+      <div id="carouselExampleIndicators" class="carousel slide sticky-img">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="{{ data.img1 }}" class="d-block w-100" alt="..." />
+          </div>
+          <div class="carousel-item">
+            <img src="{{ data.img2 }}" class="d-block w-100" alt="..." />
+          </div>
+          <div class="carousel-item">
+            <img src="{{ data.img3 }}" class="d-block w-100" alt="..." />
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="prev">
+          <span class="pre-btn carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next">
+          <span class="nex-btn carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+    <div class="book-content col-lg-6 mx-auto">
+      <h1>{{ data.title }}</h1>
+      <p style="color: green; margin-top: 0">Special price</p>
+      <h1 class="fw-bold">₹{{ data.rate }}</h1>
+      <p>Available offer</p>
+      <ul>
+        <li>
+          Bank Offer10% off on Axis Bank Credit Card EMI Transactions, up to
+          ₹1,500 on orders of ₹5,000 and aboveT&C
+        </li>
+        <li>
+          Bank Offer10% off on Flipkart Axis Bank Credit Card EMI Transactions,
+          up to ₹1500 on orders of ₹5000 and aboveT&C
+        </li>
+        <li>
+          Bank Offer10% off on Citi Credit Card EMI Transactions, up to ₹1,500
+          on orders of ₹5,000 and aboveT&C
+        </li>
+        <li>
+          Special PriceGet extra 29% off (price inclusive of cashback/coupon)T&C
+        </li>
+      </ul>
+      <button class="{{ data.outOfStock ? 'disabled' : '' }} btn btn-success" (click)="add()">
+        Add to Cart
+      </button>
+      <p style="color: red" *ngIf="data.outOfStock">Currently Out of Stock</p>
+      <div *ngIf="success" class="alert alert-success my-3" role="alert">
+        Successfully added
+      </div>
+      <div class="accordion" id="accordionExample">
+        <div class="accordion-item my-5">
+          <h2 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+              aria-expanded="true" aria-controls="collapseOne">
+              About Book
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show my-2" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <p><strong>Author :</strong> {{ data.author }}</p>
+              <p><strong>Pages :</strong> {{ data.Pages }}</p>
+              <p><strong>Language :</strong> {{ data.Language }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <app-comment [id]="id" [comments]="data.comments"></app-comment>
+    </div>
+  </div>
+</div>

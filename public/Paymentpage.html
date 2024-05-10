@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!-- Basic -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0">
+
+  <!-- Site Metas -->
+  <title>RIYADVI360°</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Site Icons -->
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- Site CSS -->
+
+  <!-- Responsive CSS -->
+  <link rel="stylesheet" href="css/responsive.css">
+  <!-- color -->
+  <link id="changeable-colors" rel="stylesheet" href="css/colors/orange.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
+    integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">
+  <!-- Modernizer -->
+  <script src="js/modernizer.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+    crossorigin="anonymous"></script>
+
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  <!-- <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet"> -->
+  <!-- <link href="assets/vendor/aos/aos.css" rel="stylesheet"> -->
+
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+  <link rel="stylesheet" href="css/payment.css">
+</head>
+
+<body>
+
+
+  <div id="loader">
+    <!-- <div class="loading status">
+      <span><img
+        src="https://jabez-tiles.s3.ap-south-1.amazonaws.com/riyadvilogo.png" width="70px" height="70px"></span>
+      <span>R</span>
+      <span>I</span>
+      <span>Y</span>
+      <span>A</span>
+      <span>D</span>
+      <span>V</span>
+      <span>I</span>
+      <span class="load">3</span>
+      <span class="load">6</span>
+      <span class="load">0</span>
+      <span class="load">°</span>
+
+    </div> -->
+
+    <div class="status">
+      <span><img src="https://jabez-tiles.s3.ap-south-1.amazonaws.com/riyadvilogo.png" width="80px"
+          height="80px"></span>
+
+    </div>
+    <div style="color: #B8860B; margin-top: 200px;   font-family: sans-serif;
+    font-size: 18px;
+    text-shadow: 0 0 20px #B8860B;
+    letter-spacing: 3px; font-weight: bold;"><span style="color: #ffffff;">RIYADVI</span>360°</div>
+
+  </div>
+
+
+  <header id="header" class="fixed-top d-flex align-items-center justify-content-lg-between">
+
+    <div class="logo me-auto me-lg-0" data-aos="fade-left"><a href="index.html"><img
+          src="https://jabez-tiles.s3.ap-south-1.amazonaws.com/riyadvilogo.png"><span
+          class="firstlet">RIYADVI</span><span class="secondlet">360°</span></a></div>
+
+    <nav id="navbar" class="navbar order-last order-lg-0">
+      <ul>
+        <li><a class="nav-link scrollto " href="index.html" data-aos="fade-right"><i class="fa fa-home"
+              aria-hidden="true" style="font-size: 18px;  padding-right: 8px;"></i>Home</a></li>
+
+        <li><a href="#" class="nav-link scrollto" onclick="product()" data-aos="fade-right"><i
+              class="fa-solid fa-panorama" style="font-size: 15px;  padding-right: 8px;"></i>Tiles 360°</a></li>
+        <li><a href="#" class="nav-link scrollto active" onclick="pricing()" data-aos="fade-right"><i
+              class="fa-solid fa-dollar-sign" style="font-size: 15px;  padding-right: 8px;"></i>Payment</a></li>
+
+        <li><a href="#" class="nav-link scrollto" onclick="support()" data-aos="fade-right"><i
+              class="fa-solid fa-headset" style="font-size: 15px;  padding-right: 8px;"></i>Enquiry</a></li>
+
+        <li><a id="loginfirst" href="#" class="nav-link scrollto"
+            onclick="document.getElementById('id01').style.display='block'" data-aos="fade-right"><i
+              class="fa-solid fa-user" style="font-size: 15px; padding-right: 8px;"></i>Login</a></li>
+
+        <li>
+          <div class="book-btn">
+            <a href="#" data-aos="fade-right" class="table-btn hvr-underline-from-center" onclick="freelogin()"><i
+                class="fa-solid fa-plus" style="padding-right: 8px;"></i>Free Trial</a>
+          </div>
+        </li>
+
+        <li>
+          <div id="profile" class="dropdownprofile">
+            <a id="dropbtnpro"><img id="profimage" src="https://jabez-tiles.s3.ap-south-1.amazonaws.com/man.png"
+                class="rounded-circle" alt="Avatar" /></a>
+            <div class="dropdowncontentprofile">
+              <section>
+                <div class="row d-flex justify-content-center" style="z-index: 3;">
+                  <div class="col-md-10 col-xl-7 text-center">
+                    <div class="col-md-4 mb-5 mb-md-0">
+                      <div class="card testimonial-card"
+                        style="background-color: #1a1814 !important; border:none; border-radius:2px !important">
+                        <div class="card-up" style="background-color: #B8860B;">
+                          <p class="mt-1" style="color: #ffffff !important;">
+                            Profile
+                          </p>
+                        </div>
+                        <div class="avatar mx-auto bg-white" style="background-color: #1a1814 !important;">
+                          <img src="https://jabez-tiles.s3.ap-south-1.amazonaws.com/man.png"
+                            class="rounded-circle img-fluid" />
+                        </div>
+                        <div class="card-body">
+                          <h6 id="profname" class="mb-2" style="color: #ffffff !important; font-size: 16px;">MASTER
+                            JABEZ </h6>
+                          <p id="emailname" class="mt-1" style="color: #ffffff !important;">
+                            jabez.riyadvi@gmail.com
+                          </p>
+                          <hr style="margin-top: -10px;">
+                          <div id="signout" onclick="logoutbtn()" class="mt-1">
+                            <i class="bi bi-box-arrow-right" style="padding-right: 6px;"></i>Sign out
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </li>
+
+      </ul>
+
+      <i class="bi bi-list mobile-nav-toggle"></i>
+
+    </nav>
+
+
+
+  </header><!-- End Header -->
+
+
+  <!-- <div id="banner" class="banner full-screen-mode parallax">
+        <div class="container pr">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="banner-static">
+                    <div class="banner-text">
+                        <div class="banner-cell">
+                            <h1 data-aos="fade-right">Plan & <span style="color: #B8860B;">Subscription</span></h1>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div> -->
+
+
+
+
+  <section id="hero">
+    <div id="banner" class="hero-container">
+      <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+
+        <ol id="hero-carousel-indicators"></ol>
+
+        <div class="carousel-inner" role="listbox">
+
+          <div class="carousel-item active"
+            style="background-image: url(https://jabez-tiles.s3.ap-south-1.amazonaws.com/pngtree-abstract-metallic-black-gold-frame-sport-design-concept-innovation-background-image_304900.jpg)">
+            <div class="carousel-container">
+              <div class="banner-static">
+                <div class="banner-text">
+                  <div class="banner-cell">
+                    <h1 data-aos="fade-right">Plan & <span style="color: #B8860B;">Subscription</span></h1>
+                    <!-- <div class="book-btn1" data-aos="fade-left">
+                          <a href="#reservation" onclick="login()" class="table-btn hvr-underline-from-center">Launch
+                            Visualizer</a>
+                        </div> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+          <!-- <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span> -->
+        </a>
+
+        <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+          <!-- <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span> -->
+        </a>
+
+      </div>
+      <div id="canvas-container"></div>
+    </div>
+  </section><!-- End Hero Section -->
+
+
+
+
+  <!-- <section id="hero" >
+        <div id="banner" class="hero-container">
+          <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+    
+            <ol id="hero-carousel-indicators" ></ol>
+    
+            <div class="carousel-inner" role="listbox">
+    
+              <div class="carousel-item active"
+                style="background-image: url(./images/boho-living-room-corner.jpg)">
+                <div class="carousel-container">
+                  <div class="container">
+                    <div class="banner-static">
+                        <div class="banner-text">
+                            <div class="banner-cell">
+                                <h1>Welcome to Tiles  <span class="typer" id="some-id" data-delay="200" data-delim=":" data-words="Visualizer" data-colors="red"></span><span class="cursor" data-cursorDisplay="_" data-owner="some-id"></span></h1>
+                              
+                                <p>This Visualizer Allows You To Select The Perfect Tile For Your Rooms</p>
+                                <div class="book-btn">
+                                    <a href="#reservation" class="table-btn hvr-underline-from-center">View Demo</a>
+                                    <a href="#reservation" class="table-btn hvr-underline-from-center"><i class="fa-solid fa-plus"
+                                        style="padding-right: 8px;"></i>Free Trial</a>
+                                </div>
+                                
+                           
+                            </div>
+                         
+                        </div>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+        
+    
+            </div> -->
+
+  <!-- <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+            </a>
+    
+            <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+              <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+            </a> -->
+
+
+  <div id="menu" class="menu-main pad-top-100 pad-bottom-100">
+
+    <div class="row">
+      <div class="container">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <div class="wow fadeIn" data-wow-duration="1s" data-wow-delay="0.1s">
+            <h2 class="block-title text-center" data-aos="fade-down">
+              <span style="color: #3e3838;">Plan &</span> Subscription
+            </h2>
+            <p class="title-caption text-center" data-aos="fade-down">Happiness with subscriptions
+            </p>
+          </div>
+          <section id="pricing" class="pricing-content section-padding">
+            <div class="" data-aos="">
+
+              <div class="col-12 mt-4">
+
+
+                <div class="row text-center">
+                  <div class="col-lg-4 col-sm-6 col-xs-12 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.1s"
+                    data-wow-offset="0"
+                    style="visibility: visible; animation-duration: 1s; animation-delay: 0.1s; animation-name: fadeInUp;">
+                    <div class="pricing_design">
+                      <div class="single-pricing">
+                        <div class="price-head">
+                          <h2>Starter</h2>
+                          <h1>$0</h1>
+                          <span>/Annual</span>
+                        </div>
+                        <ul style="text-align: left;">
+                          <li style="color: #fff;"><i class="bi bi-check"
+                              style="font-size: 25px; padding: 5px; color: #B8860B;"></i>
+                            Pre-loaded Rooms100</li>
+                          <li style="color: #fff;"><i class="bi bi-check"
+                              style="font-size: 25px; padding: 5px; color: #B8860B;"></i>
+                            Tiles Upload Limit1500</li>
+                          <li style="color: #fff;"><i class="bi bi-check"
+                              style="font-size: 25px; padding: 5px; color: #B8860B;"></i>
+                            Web Integration Yes</li>
+                          <li style="color: #fff;"><i class="bi bi-check"
+                              style="font-size: 25px; padding: 5px; color: #B8860B;"></i>
+                            Save Preview Image Ulimited</li>
+                          <li style="color: #fff;"><i class="bi bi-check"
+                              style="font-size: 25px; padding: 5px; color: #B8860B;"></i>
+                            Tiles Layout All Preloaded</li>
+                          <li style="color: #fff;"><i class="bi bi-check"
+                              style="font-size: 25px; padding: 5px; color: #B8860B;"></i>
+                            Product Inquiry Yes</li>
+                        </ul>
+
+                        <div class="book-btn1">
+                          <a href="#reservation" onclick="subscrpt()" class="table-btn hvr-underline-from-center">Pay
+                            Now</a>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-sm-6 col-xs-12 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s"
+                    data-wow-offset="0"
+                    style="visibility: visible; animation-duration: 1s; animation-delay: 0.2s; animation-name: fadeInUp;">
+                    <div class="pricing_design">
+                      <div class="single-pricing">
+                        <div class="price-head">
+                          <h2>Premium</h2>
+                          <h1 class="price">$12.5</h1>
+                          <span>/Annual</span>
+                        </div>
+                        <ul style="text-align: left;">
+                          <li style="color: #fff;"><i class="bi bi-check"
+                              style="font-size: 25px; padding: 5px; color: #B8860B;"></i>
+                            Pre-loaded Rooms100</li>
+                          <li style="color: #fff;"><i class="bi bi-check"
+                              style="font-size: 25px; padding: 5px; color: #B8860B;"></i>
+                            Tiles Upload Limit1500</li>
+                          <li style="color: #fff;"><i class="bi bi-check"
+                              style="font-size: 25px; padding: 5px; color: #B8860B;"></i>
+                            Web Integration Yes</li>
+                          <li style="color: #fff;"><i class="bi bi-check"
+                              style="font-size: 25px; padding: 5px; color: #B8860B;"></i>
+                            Save Preview Image Ulimited</li>
+                          <li style="color: #fff;"><i class="bi bi-check"
+                              style="font-size: 25px; padding: 5px; color: #B8860B;"></i>
+                            Tiles Layout All Preloaded</li>
+                          <li style="color: #fff;"><i class="bi bi-check"
+                              style="font-size: 25px; padding: 5px; color: #B8860B;"></i>
+                            Product Inquiry Yes</li>
+                        </ul>
+
+
+                        <div class="book-btn1">
+                          <a href="#reservation" onclick="subscrpt()" class="table-btn hvr-underline-from-center">Pay
+                            Now</a>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div><!--- END COL -->
+                  <div class="col-lg-4 col-sm-6 col-xs-12 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s"
+                    data-wow-offset="0"
+                    style="visibility: visible; animation-duration: 1s; animation-delay: 0.3s; animation-name: fadeInUp;">
+                    <div class="pricing_design">
+                      <div class="single-pricing">
+                        <div class="price-head">
+                          <h2>Advance</h2>
+                          <h1 class="price">$15</h1>
+                          <span>/Monthly</span>
+                        </div>
+                        <ul style="text-align: left;">
+                          <li style="color: #fff;"><i class="bi bi-check"
+                              style="font-size: 25px; padding: 5px; color: #B8860B;"></i>
+                            Pre-loaded Rooms100</li>
+                          <li style="color: #fff;"><i class="bi bi-check"
+                              style="font-size: 25px; padding: 5px; color: #B8860B;"></i>
+                            Tiles Upload Limit1500</li>
+                          <li style="color: #fff;"><i class="bi bi-check"
+                              style="font-size: 25px; padding: 5px; color: #B8860B;"></i>
+                            Web Integration Yes</li>
+                          <li style="color: #fff;"><i class="bi bi-check"
+                              style="font-size: 25px; padding: 5px; color: #B8860B;"></i>
+                            Save Preview Image Ulimited</li>
+                          <li style="color: #fff;"><i class="bi bi-check"
+                              style="font-size: 25px; padding: 5px; color: #B8860B;"></i>
+                            Tiles Layout All Preloaded</li>
+                          <li style="color: #fff;"><i class="bi bi-check"
+                              style="font-size: 25px; padding: 5px; color: #B8860B;"></i>
+                            Product Inquiry Yes</li>
+                        </ul>
+                        <div class="book-btn1">
+                          <a href="#reservation" onclick="subscrpt()" class="table-btn hvr-underline-from-center">Pay
+                            Now</a>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div><!--- END COL -->
+                </div><!--- END ROW -->
+              </div>
+          </section>
+        </div>
+        <!-- end tab-menu -->
+      </div>
+      <!-- end col -->
+    </div>
+    <!-- end row -->
+  </div>
+  <!-- end container -->
+
+
+  <div id="pay"
+    style="display: none; text-align: center; background-color: #1a1814; padding: 20px; margin-left: 150px; margin-right: 150px; margin-bottom: 150px; border-radius: 10px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);">
+
+    <div>
+      <h2 for="card-element" style="color: #ffffff; font-size: 24px; margin-bottom: 10px;">
+        Credit or Debit Card Payment
+      </h2>
+      <div id="card-element"
+        style="margin: 20px auto; padding: 15px; color: #ffffff; background-color: #a7a5a5; border-radius: 5px;">
+        <!-- A Stripe Element will be inserted here. -->
+      </div>
+      <div id="card-errors" role="alert" style="color: #ff5555; margin-top: 10px;"></div>
+    </div>
+    <button id="submit-payment"
+      style="background-color: #B8860B; color: #ffffff; border: none; padding: 10px 20px; font-size: 16px; border-radius: 50px; cursor: pointer; margin-top: 20px;">Submit
+      Payment</button>
+  </div>
+
+
+  <div class="special-menu pad-top-100 parallax">
+
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <div class="wow fadeIn" data-wow-duration="1s" data-wow-delay="0.1s">
+            <h2 class="block-title text-center" data-aos="fade-down"> <span style="color: #ffffff;">Support Starts With
+              </span>
+              Us </h2>
+            <p class="title-caption text-center" data-aos="fade-down"> More than just high-quality product </p>
+          </div>
+          <section id="services" class="services" style="padding-bottom: 60px;">
+
+            <!-- <div class="container"> -->
+
+
+
+
+            <div class="row" style="margin-top: 40px;">
+
+              <div class="col-lg-4 col-md-6 icon-box" data-aos="zoom-in-right">
+                <div class=" shadows">
+                  <div class="icon"><img
+                      src="https://jabez-tiles.s3.ap-south-1.amazonaws.com/team-support-svgrepo-com.svg"
+                      class="img-fluid" alt="" data-aos="fade-left" style=""></div>
+                  <h4 class="title"><a href="">SUPPORT TEAM</a></h4>
+                  <p class="description">Our support team is always available to assist you, providing the resources and
+                    guidance necessary to make the most of the Wizart VR visualizer. </p>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6 icon-box" data-aos="zoom-in-left">
+                <div class=" shadows">
+                  <div class="icon"><img
+                      src="https://jabez-tiles.s3.ap-south-1.amazonaws.com/noun-arm-wrestling-5756860.svg"
+                      class="img-fluid" alt="" data-aos="fade-left" style=""></div>
+                  <h4 class="title"><a href="">SEAMLESS INTEGRATION</a></h4>
+                  <p class="description">Our team of experts can help you quickly integrate the technology, enabling you
+                    to start getting the benefits as soon as possible.</p>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6 icon-box" data-aos="zoom-in-right">
+                <div class=" shadows">
+                  <div class="icon"><img
+                      src="https://jabez-tiles.s3.ap-south-1.amazonaws.com/noun-price-increase-5315935.svg"
+                      class="img-fluid" alt="" data-aos="fade-left" style=""></div>
+                  <h4 class="title"><a href="">
+                      Quality for the same price</a></h4>
+                  <p class="description"> It is a combination of various factors such as design, performance,
+                    reliability, safety, Constantly improving
+                    quality for the same price
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- </div> -->
+          </section><!-- End Services Section -->
+
+
+        </div>
+        <!-- end col -->
+      </div>
+      <!-- end row -->
+    </div>
+    <!-- end container -->
+  </div>
+
+
+
+  <div id="menu" class="menu-main pad-bottom-100">
+
+    <!-- <div class="row">
+          <div class="container">
+              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+              
+
+                  <div id="menu" class="menu-main pad-bottom-100"> -->
+
+    <div class="row">
+      <div class="container">
+
+        <section id="contact" class="contact">
+          <!-- <div class="container"> -->
+          <div class="wow fadeIn" data-wow-duration="1s" data-wow-delay="0.1s">
+            <h2 class="block-title text-center" data-aos="fade-down">
+              <span style="color:#3e3838;">Any questions ? </span> Don’t hesitate to ask
+            </h2>
+            <!-- <p class="title-caption text-center" data-aos="fade-down">Frequently asked questions about visualizer
+                                        </p> -->
+          </div>
+          <div class="row mt-5">
+
+
+            <div class="col-lg-12 mt-5 mt-lg-0" data-aos="fade-left">
+
+              <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                <div class="row">
+                  <div class="col-md-6 form-group">
+                    <input type="text" name="name" class="form-control" id="enqname" placeholder="Your Name" required>
+                  </div>
+                  <div class="col-md-6 form-group mt-3 mt-md-0">
+                    <input type="email" class="form-control" name="email" id="enqemail" placeholder="Your Email"
+                      required>
+                  </div>
+                </div>
+
+                <!-- <div class="form-group mt-3">
+                                              <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                                            </div> -->
+
+                <div class="form-group select-icon mt-3">
+                  <select class="form-control" name="subject" id="enqsubject" style="height: 50px; font-size: 14px;"
+                    required>
+                    <option value="">Select a subject</option>
+                    <option value="option1">Free Trial Enquiry</option>
+                    <option value="option2">Payment Enquiry</option>
+                    <option value="option3">How to use Visualizer</option>
+
+                    <!-- Add more options as needed -->
+                  </select>
+                </div>
+
+
+
+                <div class="form-group mt-3">
+                  <textarea class="form-control" id="enqmessage" name="message" rows="5" placeholder="Message"
+                    required></textarea>
+                </div>
+                <div class="my-3">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Your message has been sent. Thank you!</div>
+                </div>
+                <div class="book-btn1">
+                  <a onclick="submitForm()" class="table-btn hvr-underline-from-center">Launch Visualizer</a>
+                </div>
+              </form>
+
+            </div>
+
+          </div>
+
+          <!-- </div> -->
+        </section><!-- End Contact Section -->
+
+      </div>
+      <!-- end tab-menu -->
+    </div>
+    <!-- end col -->
+  </div>
+  <!-- end row -->
+
+
+
+
+
+  <div id="menu" class="special-menu pad-top-100 pad-bottom-80">
+
+    <div class="row">
+      <div class="container">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <div class="wow fadeIn" data-wow-duration="1s" data-wow-delay="0.1s">
+            <h2 class="block-title text-center" data-aos="fade-down">
+              <span style="color: #ffffff;">Asked</span> Questions
+            </h2>
+            <p class="title-caption text-center" data-aos="fade-down">Frequently asked questions about visualizer
+            </p>
+          </div>
+          <section id="faq" class="faq section">
+            <div class="container" data-aos="fade-up">
+
+              <!-- <div class="section-title">
+                            <h2>Questions</h2>
+                            <p>Frequently Asked <span style="color: #B8860B;">Questions</span></p>
+                          </div> -->
+              <div class="faq-list">
+                <ul>
+                  <li data-aos="fade-up" data-aos-delay="100">
+                    <a data-bs-toggle="collapse" class="collapse" data-bs-target="#faq-list-1"><i
+                        class="bi bi-question-circle" style="padding-right: 8px;"></i>How does Riyadvi360 create a VR
+                      room ?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                    <div id="faq-list-1" class="collapse" data-bs-parent=".faq-list">
+                      <p>
+                        Wizart ensures high-quality product visualization in a few clicks and provides your customers
+                        with a
+                        sense of purchase before buying and get rid of the imagination gap problem.
+                      </p>
+                    </div>
+                  </li>
+
+                  <li data-aos="fade-up" data-aos-delay="200">
+                    <a data-bs-toggle="collapse" data-bs-target="#faq-list-2" class="collapsed"><i
+                        class="bi bi-question-circle" style="padding-right: 8px;"></i>How long does it take to integrate
+                      VR Visualizer? <i class="bx bx-chevron-down icon-show"></i><i
+                        class="bx bx-chevron-up icon-close"></i></a>
+                    <div id="faq-list-2" class="collapse" data-bs-parent=".faq-list">
+                      <p>
+                        The time needed for our team to prepare all the content depends on many factors, including the
+                        quality
+                        of the original data, the complexity of the product texture, etc. On average, you can expect to
+                        get a
+                        final VR room for one product within 1 week.
+                      </p>
+                    </div>
+                  </li>
+
+                  <li data-aos="fade-up" data-aos-delay="300">
+                    <a data-bs-toggle="collapse" data-bs-target="#faq-list-3" class="collapsed"><i
+                        class="bi bi-question-circle" style="padding-right: 8px;"></i>Are there any hardware or software
+                      requirements for the integration of the VR
+                      visualizer? <i class="bx bx-chevron-down icon-show"></i><i
+                        class="bx bx-chevron-up icon-close"></i></a>
+                    <div id="faq-list-3" class="collapse" data-bs-parent=".faq-list">
+                      <p>
+                        No, the Wizart VR visualizer doesn’t require any additional equipment rather than an electronic
+                        device
+                        with access to the internet. It works with every CMS out there and can be seamlessly integrated
+                        into
+                        any website.
+                      </p>
+                    </div>
+                  </li>
+
+                  <li data-aos="fade-up" data-aos-delay="400">
+                    <a data-bs-toggle="collapse" data-bs-target="#faq-list-4" class="collapsed"><i
+                        class="bi bi-question-circle" style="padding-right: 8px;"></i>Is it possible to get a custom
+                      interior for the VR room? <i class="bx bx-chevron-down icon-show"></i><i
+                        class="bx bx-chevron-up icon-close"></i></a>
+                    <div id="faq-list-4" class="collapse" data-bs-parent=".faq-list">
+                      <p>
+                        Yes, If you are interested in creating a custom interior, our team will be happy to accommodate
+                        your
+                        needs. Just contact us at sales@wizart.ai to request a custom quote.
+                      </p>
+                    </div>
+                  </li>
+
+                  <!-- <li data-aos="fade-up" data-aos-delay="500">
+                              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-5" class="collapsed">Tortor vitae purus faucibus ornare. Varius vel pharetra vel turpis nunc eget lorem dolor? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                              <div id="faq-list-5" class="collapse" data-bs-parent=".faq-list">
+                                <p>
+                                  Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo integer malesuada nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc eget lorem dolor sed. Ut venenatis tellus in metus vulputate eu scelerisque.
+                                </p>
+                              </div>
+                            </li> -->
+
+                </ul>
+              </div>
+
+            </div>
+          </section><!-- End Frequently Asked Questions Section -->
+        </div>
+        <!-- end tab-menu -->
+      </div>
+      <!-- end col -->
+    </div>
+    <!-- end row -->
+  </div>
+  <!-- end container -->
+
+
+
+
+
+
+
+
+  <div class="footer-box pad-top-70">
+    <div class="container">
+      <div class="row">
+        <div class="footer-in-main">
+          <div class="footer-logo">
+            <div class="text-center">
+              <a class="" style="color: aliceblue; font-size: 35px; font-weight: 700; letter-spacing: 3px;"><img
+                  src="https://jabez-tiles.s3.ap-south-1.amazonaws.com/riyadvilogo.png" alt="" width="70px"
+                  height="60px" />RIYADVI<span
+                  style="color:#B8860B; letter-spacing: 3px; font-size: 35px; font-weight: 700;">360°</span></a>
+              <!--  -->
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+            <div class="footer-box-a">
+              <h3>About Us</h3>
+              <p><i class='fas fa-angle-double-right' style="padding-right: 5px;"></i>Welcome to RIYADVI360°, the new,
+                simple way to
+                visualize tiles. Most innovative tile visualizer application that helps you bring your ideas for
+                tiling your walls and floors to a beautiful reality. </p>
+              <ul class="socials-box footer-socials pull-left">
+                <li>
+                  <a href="#">
+                    <div class="social-circle-border"><i class="fa  fa-facebook"></i></div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <div class="social-circle-border"><i class="fa fa-twitter"></i></div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <div class="social-circle-border"><i class="fa fa-instagram"></i></div>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <div class="social-circle-border"><i class="fa fa-linkedin"></i></div>
+                  </a>
+                </li>
+              </ul>
+
+            </div>
+            <!-- end footer-box-a -->
+          </div>
+          <!-- end col -->
+
+          <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+            <div class="footer-box-b">
+              <h3>Useful Links</h3>
+              <ul>
+                <li><a href="#"><i class='fas fa-angle-double-right' style="padding-right: 5px;"></i>Home</a></li>
+                <li><a href="#"><i class='fas fa-angle-double-right' style="padding-right: 5px;"></i>About us</a></li>
+                <li><a href="#"><i class='fas fa-angle-double-right' style="padding-right: 5px;"></i>Services</a></li>
+                <li><a href="#"><i class='fas fa-angle-double-right' style="padding-right: 5px;"></i>Terms of
+                    service</a></li>
+                <li><a href="#"><i class='fas fa-angle-double-right' style="padding-right: 5px;"></i>Privacy policy</a>
+                </li>
+              </ul>
+            </div>
+            <!-- end footer-box-b -->
+          </div>
+          <!-- end col -->
+
+          <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+            <div class="footer-box-b">
+              <h3>Need Help ?</h3>
+              <ul>
+                <li><a href="#"><i class='fas fa-angle-double-right' style="padding-right: 5px;"></i>Plan &
+                    Subscription</a></li>
+                <li><a href="#"><i class='fas fa-angle-double-right' style="padding-right: 5px;"></i>Cookies</a></li>
+                <li><a href="#"><i class='fas fa-angle-double-right' style="padding-right: 5px;"></i>Privacy Policy</a>
+                </li>
+                <li><a href="#"><i class='fas fa-angle-double-right' style="padding-right: 5px;"></i>Terms &
+                    Condition</a></li>
+                <li><a href="#"><i class='fas fa-angle-double-right' style="padding-right: 5px;"></i>Payment &
+                    Refund</a></li>
+              </ul>
+            </div>
+            <!-- end footer-box-b -->
+          </div>
+
+
+          <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+            <div class="footer-box-c">
+              <h3>Contact Us</h3>
+              <p>
+                <i class="bi bi-geo-alt-fill"></i>
+                <span>126 / 213, Rk Mutt Road, Mylapore,
+                  Chennai-600004</span>
+              </p>
+              <p>
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <span><a href="tel:90808 22034">
+                    (+91) 90808 22034</a>
+                </span>
+              </p>
+
+              <p>
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <span><a
+                    href="mailto:info@riyadvisoftwaretechnologies.com">info@riyadvisoftwaretechnologies.com</a></span>
+              </p>
+
+            </div>
+            <!-- end footer-box-c -->
+          </div>
+          <!-- end col -->
+          <!-- <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                            <div class="footer-box-d">
+                                <h3>Opening Hours</h3>
+
+                                <ul>
+                                    <li>
+                                        <p>Monday - Thursday </p>
+                                        <span> 11:00 AM - 9:00 PM</span>
+                                    </li>
+                                    <li>
+                                        <p>Friday - Saturday </p>
+                                        <span>  11:00 AM - 5:00 PM</span>
+                                    </li>
+                                </ul>
+                            </div>
+                       
+                        </div> -->
+          <!-- end col -->
+        </div>
+        <!-- end footer-in-main -->
+      </div>
+      <!-- end row -->
+    </div>
+    <!-- end container -->
+    <div id="copyright" class="copyright-main">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <h6 class="copy-title"> Copyright Reserved &copy; 2023 powered by RIYADVI<span
+                style="color: #B8860B;">360°</span>
+              <a href="#" target="_blank"></a>
+            </h6>
+          </div>
+        </div>
+        <!-- end row -->
+      </div>
+      <!-- end container -->
+    </div>
+    <!-- end copyright-main -->
+  </div>
+  <!-- end footer-box -->
+  </div>
+  <!-- end footer-main -->
+
+  <a href="#" class="scrollup" style="display: none;">Scroll</a>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+  <!-- <section id="color-panel" class="close-color-panel">
+        <a class="panel-button gray2"><i class="fa fa-cog fa-spin fa-2x"></i></a>
+       
+        <div class="segment">
+            <h4 class="gray2 normal no-padding">Color Scheme</h4>
+            <a title="orange" class="switcher orange-bg"></a>
+            <a title="strong-blue" class="switcher strong-blue-bg"></a>
+            <a title="moderate-green" class="switcher moderate-green-bg"></a>
+            <a title="vivid-yellow" class="switcher vivid-yellow-bg"></a>
+        </div>
+    </section> -->
+
+  <!-- ALL JS FILES -->
+  <script src="js/all.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+  <script src="js/custom.js"></script>
+
+  <script src="https://js.stripe.com/v3/"></script>
+
+  <script>
+
+    AOS.init({
+      duration: 500,
+    })
+
+    function start() {
+      document.getElementById("gggg").style.display = "none";
+    }
+    setTimeout(start, 8000);
+
+
+
+    // Call & init
+    $(document).ready(function () {
+      $('.ba-slider').each(function () {
+        var cur = $(this);
+        // Adjust the slider
+        var width = cur.width() + 'px';
+        cur.find('.resize img').css('width', width);
+        // Bind dragging events
+        drags(cur.find('.handle'), cur.find('.resize'), cur);
+      });
+    });
+
+    // Update sliders on resize. 
+    // Because we all do this: i.imgur.com/YkbaV.gif
+    $(window).resize(function () {
+      $('.ba-slider').each(function () {
+        var cur = $(this);
+        var width = cur.width() + 'px';
+        cur.find('.resize img').css('width', width);
+      });
+    });
+
+    function drags(dragElement, resizeElement, container) {
+
+      // Initialize the dragging event on mousedown.
+      dragElement.on('mousedown touchstart', function (e) {
+
+        dragElement.addClass('draggable');
+        resizeElement.addClass('resizable');
+
+        // Check if it's a mouse or touch event and pass along the correct value
+        var startX = (e.pageX) ? e.pageX : e.originalEvent.touches[0].pageX;
+
+        // Get the initial position
+        var dragWidth = dragElement.outerWidth(),
+          posX = dragElement.offset().left + dragWidth - startX,
+          containerOffset = container.offset().left,
+          containerWidth = container.outerWidth();
+
+        // Set limits
+        minLeft = containerOffset + 10;
+        maxLeft = containerOffset + containerWidth - dragWidth - 10;
+
+        // Calculate the dragging distance on mousemove.
+        dragElement.parents().on("mousemove touchmove", function (e) {
+
+          // Check if it's a mouse or touch event and pass along the correct value
+          var moveX = (e.pageX) ? e.pageX : e.originalEvent.touches[0].pageX;
+
+          leftValue = moveX + posX - dragWidth;
+
+          // Prevent going off limits
+          if (leftValue < minLeft) {
+            leftValue = minLeft;
+          } else if (leftValue > maxLeft) {
+            leftValue = maxLeft;
+          }
+
+          // Translate the handle's left value to masked divs width.
+          widthValue = (leftValue + dragWidth / 2 - containerOffset) * 100 / containerWidth + '%';
+
+          // Set the new values for the slider and the handle. 
+          // Bind mouseup events to stop dragging.
+          $('.draggable').css('left', widthValue).on('mouseup touchend touchcancel', function () {
+            $(this).removeClass('draggable');
+            resizeElement.removeClass('resizable');
+          });
+          $('.resizable').css('width', widthValue);
+        }).on('mouseup touchend touchcancel', function () {
+          dragElement.removeClass('draggable');
+          resizeElement.removeClass('resizable');
+        });
+        e.preventDefault();
+      }).on('mouseup touchend touchcancel', function (e) {
+        dragElement.removeClass('draggable');
+        resizeElement.removeClass('resizable');
+      });
+    }
+
+
+
+
+
+    function back() {
+
+      window.location = "./index.html"
+
+    }
+
+    function subscrpt() {
+
+      document.getElementById("pay").style.display = "block";
+      // document.getElementById("Subscript").style.display = "none";
+      document.getElementById("pricing").style.display = "none";
+
+    }
+
+
+    function payback() {
+      document.getElementById("pay").style.display = "none";
+      document.getElementById("Subscript").style.display = "block";
+
+    }
+
+    function start() {
+      document.getElementById("ctn-preloader").style.display = "none";
+    }
+    setTimeout(start, 3000);
+
+  </script>
+
+
+
+
+  <script>
+    var stripe = Stripe('pk_test_51NTfHrSBEBPKn6D4vssh3EHI1D2XZ5Pa6lpShITdXaNMk4tDguBJvlEQdGA14j8T639QRCzp2qZGoxaeGq32uJv800qRMg3Cm8');
+
+    // Create a Stripe Elements instance
+    var elements = stripe.elements();
+    // Create an instance of the card Element
+    var card = elements.create('card');
+
+    // Add an instance of the card Element into the 'card-element' div
+    card.mount('#card-element');
+
+    // Handle real-time validation errors from the card Element
+    card.on('change', function (event) {
+      var displayError = document.getElementById('card-errors');
+      if (event.error) {
+        displayError.textContent = event.error.message;
+      } else {
+        displayError.textContent = '';
+      }
+    });
+
+    // Handle form submission
+    var submitButton = document.getElementById('submit-payment');
+    submitButton.addEventListener('click', function (event) {
+      event.preventDefault();
+
+      stripe.createToken(card).then(function (result) {
+        if (result.error) {
+          var errorElement = document.getElementById('card-errors');
+          errorElement.textContent = result.error.message;
+        } else {
+          stripeTokenHandler(result.token);
+        }
+      });
+    });
+
+    // Send the token to your server
+    function stripeTokenHandler(token) {
+      const email = localStorage.getItem("payemail");
+
+      fetch('http://localhost:8080/create-payment-intent', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ token: token.id, email: email })
+      })
+        .then(response => response.json())
+        .then(data => {
+          console.log(data);
+
+          if (data.success) {
+            // Payment successful, redirect to the next page
+            window.location.href = './visualizer.html'; // Replace 'next-page.html' with your actual next page URL
+          } else {
+            // Payment failed, display an error message or take appropriate action
+            console.error('Payment failed:', data.errorMessage);
+          }
+        })
+        .catch(error => {
+          console.error('Error:', error);
+        });
+      console.log(token);
+    }
+  </script>
+
+
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <script src="./Mainjavascript/index.js"></script>
+</body>
+
+
+</html>

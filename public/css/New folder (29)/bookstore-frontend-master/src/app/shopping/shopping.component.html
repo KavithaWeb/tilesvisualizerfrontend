@@ -1,0 +1,83 @@
+<div class="container py-5" style="background-color: #fff">
+  <div class="row">
+    <h1 class="text-center">Order details</h1>
+    <div class="col-lg-8 mx-auto">
+      <form
+        class="row"
+        [formGroup]="shoppingForm"
+        (submit)="submitShoppingForm()"
+      >
+        <div class="col-lg-6">
+          <mat-form-field appearance="outline">
+            <mat-label>Name</mat-label>
+            <input matInput value="{{ res.name }}" readonly />
+          </mat-form-field>
+        </div>
+        <div class="col-lg-6">
+          <mat-form-field appearance="outline">
+            <mat-label>Username</mat-label>
+            <input matInput readonly value="{{ res.username }}" />
+          </mat-form-field>
+        </div>
+        <mat-form-field appearance="outline">
+          <mat-label>Delivery Address</mat-label>
+          <textarea matInput formControlName="address"></textarea>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Phone number</mat-label>
+          <input matInput formControlName="phone" />
+        </mat-form-field>
+        <h2>Payment option :</h2>
+        <mat-radio-group
+          aria-label="payment"
+          formControlName="payment"
+          class="pb-3"
+        >
+          <mat-radio-button [value]="'Cash on Delivery'"
+            >Cash on Delivery</mat-radio-button
+          ><br />
+          <mat-radio-button [value]="'Credit card'"
+            >Credit card</mat-radio-button
+          ><br />
+          <mat-radio-button [value]="'Debit card'">Debit card</mat-radio-button
+          ><br />
+          <mat-radio-button [value]="'Upi'">UPI</mat-radio-button>
+        </mat-radio-group>
+
+        <mat-form-field
+          *ngIf="shoppingForm.controls['payment'].value === 'Upi'"
+          appearance="outline"
+        >
+          <mat-label>UPI ID</mat-label>
+          <input matInput formControlName="payment_ID" />
+        </mat-form-field>
+        <mat-form-field
+          *ngIf="shoppingForm.controls['payment'].value === 'Credit card'"
+          appearance="outline"
+        >
+          <mat-label>Credit card number</mat-label>
+          <input matInput formControlName="payment_ID" />
+        </mat-form-field>
+        <mat-form-field
+          *ngIf="shoppingForm.controls['payment'].value === 'Debit card'"
+          appearance="outline"
+        >
+          <mat-label>Debit card number</mat-label>
+          <input matInput formControlName="payment_ID" />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Total</mat-label>
+          <input matInput readonly formControlName="total" />
+        </mat-form-field>
+        <button
+          type="button"
+          class="btn btn-primary"
+          (click)="submitShoppingForm()"
+        >
+          Place Order
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

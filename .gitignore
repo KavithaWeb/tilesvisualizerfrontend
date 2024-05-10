@@ -1,0 +1,35 @@
+# Three.js
+# node_modules/
+# build/
+# dist/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.code-workspace
+*.iml
+.DS_Store
+*.glb
+*.obj
+*.usdz
+*lnk
+*.jpg
+*.png
+*.jpeg
+*.svg
+*.mp4
+*.mtl
+*.gif
+# Build artifacts and logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+npm-debug.log.*
+yarn-debug.log.*
+yarn-error.log.*
+logs
+*.log
+
+# Dependency lock files
+package-lock.json
+yarn.lock

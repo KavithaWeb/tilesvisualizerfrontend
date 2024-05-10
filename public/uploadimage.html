@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <div
+        style="margin-left: 400px; margin-top: 200px; background-color: GREY; width: 750px; padding: 20px; text-decoration: underline;">
+        <h1 style="text-align: center;">FLOOR TILES IMAGE</h1>
+        <div style="margin-left: 250px;"><input id="fileupload" type="file" name="fileupload" multiple /><br /><br />
+            <input type="submit" style="color: rgb(255, 0, 0); background-color: aqua; border-radius: 50px;"
+                onclick="tilesupload()" id="btn" value="Submit" /><br><br>
+        </div>
+
+
+
+        <h1 style="text-align: center;">IMAGES</h1>
+        <div style="margin-left: 250px;"><input id="fileuploadimg" type="file" name="fileuploadimg"
+                multiple /><br /><br />
+            <input type="submit" style="color: rgb(255, 0, 0); background-color: aqua; border-radius: 50px;"
+                onclick="tilesupload2()" id="btn" value="Submit" /><br><br>
+        </div>
+
+
+        <h1 style="text-align: center;">GLB 3D MODEL UPLOAD</h1>
+        <div style="margin-left: 250px; "><input id="fileupload1" type="file" name="fileupload" multiple /><br /><br />
+            <input type="submit" style="color: rgb(255, 0, 0); background-color: aqua; border-radius: 50px;"
+                onclick="glbupload()" id="btn1" value="Submit" />
+        </div>
+    </div>
+
+
+
+    <script>
+        async function tilesupload() {
+            let inputElement = document.getElementById("fileupload");
+            const userid = localStorage.getItem("userid");
+            let formData = new FormData();
+            console.log(userid);
+            for (let i = 0; i < inputElement.files.length; i++) {
+                formData.append("file", inputElement.files[i]);
+            }
+
+            formData.append("userid", userid); // Append the userid to the form data
+
+            try {
+                let response = await fetch('http://localhost:8080/list', {
+                    method: "POST",
+                    body: formData,
+                    headers: {
+                        // You can add any necessary headers here
+                    },
+                });
+
+                if (response.ok) {
+                    const responseText = await response.text();
+                    alert("Response: " + responseText);
+                } else {
+                    alert("Error uploading files.");
+                }
+            } catch (error) {
+                alert("An error occurred: " + error.message);
+            }
+        }
+
+
+
+
+        // async function tilesupload2() {
+        //     let inputElement = document.getElementById("fileuploadimg");
+
+        //     let formData = new FormData();
+
+        //     for (let i = 0; i < inputElement.files.length; i++) {
+        //         formData.append("file", inputElement.files[i]);
+        //     }
+
+
+        //     try {
+        //         let response = await fetch('https://newtiles-env.eba-mdsv5qca.ap-south-1.elasticbeanstalk.com/listimg', {
+        //             method: "POST",
+        //             body: formData,
+        //             headers: {
+
+        //             },
+        //         });
+
+        //         if (response.ok) {
+        //             const responseText = await response.text();
+        //             alert("Response: " + responseText);
+        //         } else {
+        //             alert("Error uploading files.");
+        //         }
+        //     } catch (error) {
+        //         alert("An error occurred: " + error.message);
+        //     }
+        // }
+
+
+        async function tilesupload2() {
+            let inputElement = document.getElementById("fileuploadimg");
+            let formData = new FormData();
+
+            for (let i = 0; i < inputElement.files.length; i++) {
+                formData.append("file", inputElement.files[i]);
+            }
+
+            try {
+                let response = await fetch('http://localhost:8080/listimg', {
+                    method: "POST",
+                    body: formData
+                });
+
+                if (response.ok) {
+                    alert("File(s) successfully uploaded.");
+                } else {
+                    alert("Error uploading file(s).");
+                }
+            } catch (error) {
+                alert("An error occurred: " + error.message);
+            }
+        }
+        
+    </script>
+
+
+
+
+
+    <script>
+        async function glbupload() {
+            let inputElement = document.getElementById("fileupload1");
+            let formData = new FormData();
+
+            for (let i = 0; i < inputElement.files.length; i++) {
+                formData.append("file", inputElement.files[i]);
+            }
+
+            try {
+                let response = await fetch('http://localhost:8080/list3', {
+                    method: "POST",
+                    body: formData
+                });
+
+                if (response.ok) {
+                    alert("File(s) successfully uploaded.");
+                } else {
+                    alert("Error uploading file(s).");
+                }
+            } catch (error) {
+                alert("An error occurred: " + error.message);
+            }
+        }
+    </script>
+
+
+
+
+
+</body>
+
+</html>

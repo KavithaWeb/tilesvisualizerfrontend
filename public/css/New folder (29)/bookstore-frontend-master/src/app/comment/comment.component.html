@@ -1,0 +1,29 @@
+<div class="comments">
+  <div class="example-form w-100">
+    <mat-form-field class="example-full-width w-100 position-relative">
+      <input
+        matInput
+        placeholder="Leave your review "
+        class="w-50"
+        [formControl]="comment"
+      />
+      <button (click)="submit()" class="send-btn">
+        <mat-icon (onClick)="submit()">send</mat-icon>
+      </button>
+    </mat-form-field>
+  </div>
+</div>
+<ul class="list-group list-group-flush">
+  <li
+    *ngFor="let comment of comments"
+    class="list-group-item d-flex justify-content-between align-items-start"
+  >
+    <div *ngIf="comment.name != ''" class="d-flex align-items-center">
+      <div class="avatar">{{ comment.name[0].toUpperCase() }}</div>
+      <div class="ms-2 me-auto">
+        <div class="fw-bold">{{ comment.name }}</div>
+        {{ comment.comment }}
+      </div>
+    </div>
+  </li>
+</ul>

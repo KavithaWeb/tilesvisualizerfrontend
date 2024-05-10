@@ -1,0 +1,15 @@
+<div class="container py-5" style="background-color: #fff;">
+    <div class="row mx-auto">
+        <a routerLink="book/{{book._id}}" *ngFor="let book of data" class="cont col-lg-4 border m-2 text-center">
+            <div class="img-container my-3">
+                <!-- book image -->
+                <img src="{{book.img1}}" height="250" alt="" srcset="">
+            </div>
+            <div class="content">
+                <!-- book title -->
+                <h2>{{book.title}}</h2>
+                <p>By {{book.author}}</p>
+            </div>
+        </a>
+    </div>
+</div>

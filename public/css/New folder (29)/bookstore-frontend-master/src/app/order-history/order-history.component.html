@@ -1,0 +1,11 @@
+<div class="container" style="background-color: #fff; font-size: 18px;">
+    <h1 class="text-center py-5" >Order History</h1>
+    <ul class="list-group p-5">
+        <li *ngFor="let item of history; let i = index" class="list-group-item ">
+            <div *ngFor="let order of item.products" class="d-flex justify-content-between algin-items-center">
+                <div class="">{{order.product}}</div>
+                <div style="color: green;">Deliveried Successfully.</div>
+            </div>
+        </li>
+      </ul>
+</div>

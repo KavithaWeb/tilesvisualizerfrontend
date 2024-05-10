@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0">
+
+    <!-- Site Metas -->
+    <title>RIYADVI360°</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Site CSS -->
+
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- color -->
+    <link id="changeable-colors" rel="stylesheet" href="css/colors/orange.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
+      integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">
+    <!-- Modernizer -->
+    <script src="js/modernizer.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"></script>
+  
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+    <!-- <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet"> -->
+    <!-- <link href="assets/vendor/aos/aos.css" rel="stylesheet"> -->
+  
+    <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <link rel="stylesheet" href="css/enquiry.css">
+</head>
+
+<body>
+ 
+   <div id="loader">
+    <!-- <div class="loading status">
+      <span><img
+        src="https://jabez-tiles.s3.ap-south-1.amazonaws.com/riyadvilogo.png" width="70px" height="70px"></span>
+      <span>R</span>
+      <span>I</span>
+      <span>Y</span>
+      <span>A</span>
+      <span>D</span>
+      <span>V</span>
+      <span>I</span>
+      <span class="load">3</span>
+      <span class="load">6</span>
+      <span class="load">0</span>
+      <span class="load">°</span>
+
+    </div> -->
+
+    <div class="status">
+      <span><img src="https://jabez-tiles.s3.ap-south-1.amazonaws.com/riyadvilogo.png" width="80px"
+          height="80px"></span>
+     
+    </div>
+    <div style="color: #B8860B; margin-top: 200px;   font-family: sans-serif;
+    font-size: 18px;
+    text-shadow: 0 0 20px #B8860B;
+    letter-spacing: 3px; font-weight: bold;"><span style="color: #ffffff;">RIYADVI</span>360°</div>
+
+  </div>
+
+
+
+  <header id="header" class="fixed-top d-flex align-items-center justify-content-lg-between">
+
+    <div class="logo me-auto me-lg-0" data-aos="fade-left"><a href="index.html"><img
+          src="https://jabez-tiles.s3.ap-south-1.amazonaws.com/riyadvilogo.png"><span
+          class="firstlet">RIYADVI</span><span class="secondlet">360°</span></a></div>
+
+    <nav id="navbar" class="navbar order-last order-lg-0">
+      <ul>
+        <li><a class="nav-link scrollto" href="index.html" data-aos="fade-right"><i class="fa fa-home"
+              aria-hidden="true" style="font-size: 18px;  padding-right: 8px;"></i>Home</a></li>
+
+        <li><a href="#" class="nav-link scrollto" onclick="product()" data-aos="fade-right"><i
+              class="fa-solid fa-panorama" style="font-size: 15px;  padding-right: 8px;"></i>Tiles 360°</a></li>
+        <li><a href="#" class="nav-link scrollto" onclick="pricing()" data-aos="fade-right"><i
+              class="fa-solid fa-dollar-sign" style="font-size: 15px;  padding-right: 8px;"></i>Payment</a></li>
+
+        <li><a href="#" class="nav-link scrollto active" onclick="support()" data-aos="fade-right"><i
+              class="fa-solid fa-headset" style="font-size: 15px;  padding-right: 8px;"></i>Enquiry</a></li>
+
+        <li><a id="loginfirst" href="#" class="nav-link scrollto"
+            onclick="document.getElementById('id01').style.display='block'" data-aos="fade-right"><i
+              class="fa-solid fa-user" style="font-size: 15px; padding-right: 8px;"></i>Login</a></li>
+
+        <li>
+          <div class="book-btn">
+            <a href="#" data-aos="fade-right" class="table-btn hvr-underline-from-center" onclick="freelogin()"><i
+                class="fa-solid fa-plus" style="padding-right: 8px;"></i>Free Trial</a>
+          </div>
+        </li>
+
+        <li>
+          <div id="profile" class="dropdownprofile">
+            <a id="dropbtnpro"><img id="profimage" src="https://jabez-tiles.s3.ap-south-1.amazonaws.com/man.png"
+                class="rounded-circle" alt="Avatar" /></a>
+            <div class="dropdowncontentprofile">
+              <section>
+                <div class="row d-flex justify-content-center" style="z-index: 3;">
+                  <div class="col-md-10 col-xl-7 text-center">
+                    <div class="col-md-4 mb-5 mb-md-0">
+                      <div class="card testimonial-card"
+                        style="background-color: #1a1814 !important; border:none; border-radius:2px !important">
+                        <div class="card-up" style="background-color: #B8860B;">
+                          <p class="mt-1" style="color: #ffffff !important;">
+                            Profile
+                          </p>
+                        </div>
+                        <div class="avatar mx-auto bg-white" style="background-color: #1a1814 !important;">
+                          <img src="https://jabez-tiles.s3.ap-south-1.amazonaws.com/man.png"
+                            class="rounded-circle img-fluid" />
+                        </div>
+                        <div class="card-body">
+                          <h6 id="profname" class="mb-2" style="color: #ffffff !important; font-size: 16px;">MASTER
+                            JABEZ </h6>
+                          <p id="emailname" class="mt-1" style="color: #ffffff !important;">
+                            jabez.riyadvi@gmail.com
+                          </p>
+                          <hr style="margin-top: -10px;">
+                          <div id="signout" onclick="logoutbtn()" class="mt-1">
+                            <i class="bi bi-box-arrow-right" style="padding-right: 6px;"></i>Sign out
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </li>
+
+      </ul>
+
+      <i class="bi bi-list mobile-nav-toggle"></i>
+
+    </nav>
+
+
+
+  </header><!-- End Header -->
+
+    <!-- <div id="banner" class="banner full-screen-mode parallax">
+        <div class="container pr">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="banner-static">
+                    <div class="banner-text">
+                        <div class="banner-cell">
+                            <h1 data-aos="fade-left">Contact With <span style="color: #B8860B;">Us</span></h1>
+
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div> -->
+
+
+
+
+
+
+    <section id="hero">
+      <div id="banner" class="hero-container">
+        <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+  
+          <ol id="hero-carousel-indicators"></ol>
+  
+          <div class="carousel-inner" role="listbox">
+  
+            <div class="carousel-item active"
+              style="background-image: url(https://jabez-tiles.s3.ap-south-1.amazonaws.com/diagonal-black-overlap-shapes-with-golden-light-effect-lines-free-vector.jpg)">
+              <div class="carousel-container">
+                  <div class="banner-static">
+                    <div class="banner-text">
+                      <div class="banner-cell">
+                        <h1 data-aos="fade-right">Contact With <span style="color: #B8860B;">Us</span></h1>
+                        <!-- <div class="book-btn1" data-aos="fade-left">
+                          <a href="#reservation" onclick="login()" class="table-btn hvr-underline-from-center">Launch
+                            Visualizer</a>
+                        </div> -->
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+  
+          </div>
+  
+          <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+            <!-- <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span> -->
+          </a>
+  
+          <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+            <!-- <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span> -->
+          </a>
+  
+        </div>
+        <div id="canvas-container"></div>
+      </div>
+    </section><!-- End Hero Section -->
+
+
+
+
+
+
+    <!-- <section id="hero" >
+        <div id="banner" class="hero-container">
+          <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+    
+            <ol id="hero-carousel-indicators" ></ol>
+    
+            <div class="carousel-inner" role="listbox">
+    
+              <div class="carousel-item active"
+                style="background-image: url(./images/boho-living-room-corner.jpg)">
+                <div class="carousel-container">
+                  <div class="container">
+                    <div class="banner-static">
+                        <div class="banner-text">
+                            <div class="banner-cell">
+                                <h1>Welcome to Tiles  <span class="typer" id="some-id" data-delay="200" data-delim=":" data-words="Visualizer" data-colors="red"></span><span class="cursor" data-cursorDisplay="_" data-owner="some-id"></span></h1>
+                              
+                                <p>This Visualizer Allows You To Select The Perfect Tile For Your Rooms</p>
+                                <div class="book-btn">
+                                    <a href="#reservation" class="table-btn hvr-underline-from-center">View Demo</a>
+                                    <a href="#reservation" class="table-btn hvr-underline-from-center"><i class="fa-solid fa-plus"
+                                        style="padding-right: 8px;"></i>Free Trial</a>
+                                </div>
+                                
+                           
+                            </div>
+                         
+                        </div>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+        
+    
+            </div> -->
+
+    <!-- <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+            </a>
+    
+            <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+              <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+            </a> -->
+
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
+
+        <div class="wow fadeIn" data-wow-duration="1s" data-wow-delay="0.1s">
+          <h2 class="block-title text-center" data-aos="fade-down">
+              <span style="color: #3e3838;">Contact</span> Us
+          </h2>
+          <p class="title-caption text-center" data-aos="fade-down">Just a message away
+          </p>
+      </div>
+        <div class="row gx-lg-0 gy-4">
+
+          <div class="col-lg-4">
+
+            <div class="info-container d-flex flex-column align-items-center justify-content-center">
+              <div class="info-item d-flex">
+                <i class="bi bi-geo-alt flex-shrink-0"></i>
+                <div>
+                  <h4>Location:</h4>
+                  <p>126 / 213, Rk Mutt Road, Mylapore,
+                    Chennai-600004</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="info-item d-flex">
+                <i class="bi bi-envelope flex-shrink-0"></i>
+                <div>
+                  <h4>Email:</h4>
+                  <p>info@riyadvisoftwaretechnologies.com</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="info-item d-flex">
+                <i class="bi bi-phone flex-shrink-0"></i>
+                <div>
+                  <h4>Call:</h4>
+                  <p>(+91) 90808 22034</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="info-item d-flex">
+                <i class="bi bi-clock flex-shrink-0"></i>
+                <div>
+                  <h4>Open Hours:</h4>
+                  <p>Mon-Sat: 11AM - 23PM</p>
+                </div>
+              </div><!-- End Info Item -->
+            </div>
+
+          </div>
+
+          <div class="col-lg-8">
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="name" class="form-control" id="username" placeholder="Your Name" required>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+              </div>
+              <div class="form-group mt-3">
+                <textarea class="form-control" name="message" id="message" rows="7" placeholder="Message" required></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="book-btn1">
+                <a href="#" onclick="contactform()" class="table-btn hvr-underline-from-center">Send Message</a>
+
+            </div>
+            </form>
+          </div><!-- End Contact Form -->
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+
+
+
+    <!-- <div id="menu" class="menu-main pad-top-100 pad-bottom-100">
+
+        <div class="row">
+            <div class="container">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="wow fadeIn" data-wow-duration="1s" data-wow-delay="0.1s">
+                        <h2 class="block-title text-center" data-aos="fade-down">
+                            <span style="color: #3e3838;">Contact</span> Us
+                        </h2>
+                        <p class="title-caption text-center" data-aos="fade-down">Just a message away
+                        </p>
+                    </div>
+                    <section id="contact" class="contact">
+                   
+                  
+                          <div class="row mt-5">
+                            <div class="col-lg-4" data-aos="fade-right">
+                              <div class="info">
+                                <div class="address">
+                                  <i class="bi bi-geo-alt"></i>
+                                  <h4>Location:</h4>
+                                  <p>126 / 213, Rk Mutt Road, Mylapore,
+                                    Chennai-600004</p>
+                                </div>
+                  
+                                <div class="email">
+                                  <i class="bi bi-envelope"></i>
+                                  <h4>Email:</h4>
+                                  <p>info@riyadvisoftwaretechnologies.com</p>
+                                </div>
+                                
+                                <div class="phone">
+                                  <i class="bi bi-phone"></i>
+                                  <h4>Call:</h4>
+                                  <p>(+91) 90808 22034</p>
+                                </div>
+                  
+                              </div>
+                  
+                            </div>
+                  
+                            <div class="col-lg-8 mt-5 mt-lg-0" data-aos="fade-left">
+                  
+                              <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                                <div class="row">
+                                  <div class="col-md-6 form-group">
+                                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                                  </div>
+                                  <div class="col-md-6 form-group mt-3 mt-md-0">
+                                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                                  </div>
+                                </div>
+                                <div class="form-group mt-3">
+                                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                                </div>
+                                <div class="form-group mt-3">
+                                  <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+                                </div>
+                                <div class="my-3">
+                                  <div class="loading">Loading</div>
+                                  <div class="error-message"></div>
+                                  <div class="sent-message">Your message has been sent. Thank you!</div>
+                                </div>
+                                <div class="text-center"><button type="submit">Send Message</button></div>
+                              </form>
+                  
+                            </div>
+                  
+                          </div>
+                  
+                   
+                      </section>
+                  
+                </div>
+               
+            </div>
+       
+        </div>
+       
+    </div>
+    -->
+   
+
+
+
+
+  
+
+
+    <div id="menu" class="menu-main">
+
+        <div class="row">
+            <div class="container">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="wow" data-wow-duration="1s" data-wow-delay="0.1s">
+                        <h2 class="block-title text-center" data-aos="fade-up">
+                            <span style="color: #3e3838;">Enquiry With</span> Us
+                        </h2>
+                        <p class="title-caption text-center" data-aos="fade-up">We're ready to assist you
+                        </p>
+                    </div>
+                    <section id="services" class="services-mf route">
+      
+                
+                          <div class="row" >
+                            <div class="col-md-4">
+                              <div class="service-box">
+                                <div class="service-ico" data-aos="fade-up">
+                                  <span class="ico-circle"><i class="bi bi-display"></i></span>
+                                </div>
+                                <div class="service-content">
+                                  <h2 class="s-title" data-aos="fade-right">Get a Demo</h2>
+                                  <p class="s-description text-center" data-aos="fade-up">
+                                      Set up a demo with our training experts.
+                                      Drop us an email at 7-day free
+                                  </p>
+                                  <div class="book-btn1" data-aos="fade-up">
+                                    <a href="#" class="table-btn hvr-underline-from-center">7 Days Free Trial</a>
+                    
+                                </div>
+                                 
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-4">
+                              <div class="service-box">
+                                <div class="service-ico" data-aos="fade-up">
+                                  <span class="ico-circle"><i class="bi bi-envelope"></i></span>
+                                </div>
+                                <div class="service-content">
+                                  <h2 class="s-title" data-aos="fade-right">General Inquiries</h2>
+                                  <p class="s-description text-center" data-aos="fade-up">
+                                      For any general inquiries, feel free to contact our business development team.
+                                  </p>
+                                  <div class="book-btn1" data-aos="fade-up">
+                                    <a href="mailto:info@riyadvisoftwaretechnologies.com" class="table-btn hvr-underline-from-center">RIYADVI360° Email</a>
+                    
+                                </div>
+                                 
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-4">
+                              <div class="service-box">
+                                <div class="service-ico" data-aos="fade-up">
+                                  <span class="ico-circle"><i class="bi bi-headset"></i></span>
+                                </div>
+                                <div class="service-content">
+                                  <h2 class="s-title" data-aos="fade-right">Support</h2>
+                                  <p class="s-description text-center" data-aos="fade-up">
+                                      Forward us your feature related questions via whatsapp at (+91) 90808 22034.
+                                  </p>
+                                  <div class="book-btn1" data-aos="fade-up">
+                                    <a href="tel:90808 22034" class="table-btn hvr-underline-from-center">Help Support</a>
+                    
+                                </div>
+                                 
+                                </div>
+                              </div>
+                            </div>
+                            </div>
+                      </section>
+                  
+                </div>
+       
+            </div>
+       
+        </div>
+  
+    </div>
+
+
+
+
+
+
+    <div class="footer-box pad-top-70">
+      <div class="container">
+        <div class="row">
+          <div class="footer-in-main">
+            <div class="footer-logo">
+              <div class="text-center">
+                <a class="" style="color: aliceblue; font-size: 35px; font-weight: 700; letter-spacing: 3px;"><img
+                    src="https://jabez-tiles.s3.ap-south-1.amazonaws.com/riyadvilogo.png" alt="" width="70px"
+                    height="60px" />RIYADVI<span
+                    style="color:#B8860B; letter-spacing: 3px; font-size: 35px; font-weight: 700;">360°</span></a>
+                <!--  -->
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+              <div class="footer-box-a">
+                <h3>About Us</h3>
+                <p><i class='fas fa-angle-double-right' style="padding-right: 5px;"></i>Welcome to RIYADVI360°, the new,
+                  simple way to
+                  visualize tiles. Most innovative tile visualizer application that helps you bring your ideas for
+                  tiling your walls and floors to a beautiful reality. </p>
+                <ul class="socials-box footer-socials pull-left">
+                  <li>
+                    <a href="#">
+                      <div class="social-circle-border"><i class="fa  fa-facebook"></i></div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="social-circle-border"><i class="fa fa-twitter"></i></div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="social-circle-border"><i class="fa fa-instagram"></i></div>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#">
+                      <div class="social-circle-border"><i class="fa fa-linkedin"></i></div>
+                    </a>
+                  </li>
+                </ul>
+
+              </div>
+              <!-- end footer-box-a -->
+            </div>
+            <!-- end col -->
+
+            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+              <div class="footer-box-b">
+                <h3>Useful Links</h3>
+                <ul>
+                  <li><a href="#"><i class='fas fa-angle-double-right' style="padding-right: 5px;"></i>Home</a></li>
+                  <li><a href="#"><i class='fas fa-angle-double-right' style="padding-right: 5px;"></i>About us</a></li>
+                  <li><a href="#"><i class='fas fa-angle-double-right' style="padding-right: 5px;"></i>Services</a></li>
+                  <li><a href="#"><i class='fas fa-angle-double-right' style="padding-right: 5px;"></i>Terms of service</a></li>
+                  <li><a href="#"><i class='fas fa-angle-double-right' style="padding-right: 5px;"></i>Privacy policy</a></li>
+                </ul>
+              </div>
+              <!-- end footer-box-b -->
+            </div>
+            <!-- end col -->
+
+            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+              <div class="footer-box-b">
+                <h3>Need Help ?</h3>
+                <ul>
+                  <li><a href="#"><i class='fas fa-angle-double-right' style="padding-right: 5px;"></i>Plan & Subscription</a></li>
+                  <li><a href="#"><i class='fas fa-angle-double-right' style="padding-right: 5px;"></i>Cookies</a></li>
+                  <li><a href="#"><i class='fas fa-angle-double-right' style="padding-right: 5px;"></i>Privacy Policy</a></li>
+                  <li><a href="#"><i class='fas fa-angle-double-right' style="padding-right: 5px;"></i>Terms & Condition</a></li>
+                  <li><a href="#"><i class='fas fa-angle-double-right' style="padding-right: 5px;"></i>Payment & Refund</a></li>
+                </ul>
+              </div>
+              <!-- end footer-box-b -->
+            </div>
+
+
+            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+              <div class="footer-box-c">
+                <h3>Contact Us</h3>
+                <p>
+                  <i class="bi bi-geo-alt-fill"></i>
+                  <span>126 / 213, Rk Mutt Road, Mylapore,
+                    Chennai-600004</span>
+                </p>
+                <p>
+                  <i class="fa fa-phone" aria-hidden="true"></i>
+                  <span><a href="tel:90808 22034">
+                      (+91) 90808 22034</a>
+                  </span>
+                </p>
+              
+                <p>
+                  <i class="fa fa-envelope" aria-hidden="true"></i>
+                  <span><a href="mailto:info@riyadvisoftwaretechnologies.com">info@riyadvisoftwaretechnologies.com</a></span>
+                </p>
+             
+              </div>
+              <!-- end footer-box-c -->
+            </div>
+            <!-- end col -->
+            <!-- <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                            <div class="footer-box-d">
+                                <h3>Opening Hours</h3>
+
+                                <ul>
+                                    <li>
+                                        <p>Monday - Thursday </p>
+                                        <span> 11:00 AM - 9:00 PM</span>
+                                    </li>
+                                    <li>
+                                        <p>Friday - Saturday </p>
+                                        <span>  11:00 AM - 5:00 PM</span>
+                                    </li>
+                                </ul>
+                            </div>
+                       
+                        </div> -->
+            <!-- end col -->
+          </div>
+          <!-- end footer-in-main -->
+        </div>
+        <!-- end row -->
+      </div>
+      <!-- end container -->
+      <div id="copyright" class="copyright-main">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+              <h6 class="copy-title"> Copyright Reserved &copy; 2023 powered by RIYADVI<span
+                  style="color: #B8860B;">360°</span>
+                <a href="#" target="_blank"></a>
+              </h6>
+            </div>
+          </div>
+          <!-- end row -->
+        </div>
+        <!-- end container -->
+      </div>
+      <!-- end copyright-main -->
+    </div>
+    <!-- end footer-box -->
+  </div>
+  <!-- end footer-main -->
+
+    <a href="#" class="scrollup" style="display: none;">Scroll</a>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+ 
+
+
+  <!-- ============================================ BUTTON TO TOP ============================================ -->
+
+  <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
+    <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+
+    <!-- bootstrap 3 affix -->
+    <script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
+
+    <!-- Isotope -->
+    <script src="assets/vendors/isotope/isotope.pkgd.js"></script>
+    <script src="assets/js/leadmark.js"></script>
+
+
+
+
+
+  <script>
+
+    AOS.init({
+      duration: 800,
+    })
+
+    function back() {
+
+window.location = "./index.html"
+
+}
+
+
+
+    function start() {
+  document.getElementById("ctn-preloader").style.display = "none"; 
+}
+setTimeout(start, 3000);
+
+  </script>
+
+
+
+ 
+<script>
+  function clicks() {
+      console.log("jabez")
+      document.getElementById("closebtn").style.display = "block"
+      document.getElementById("menu").style.marginLeft = "0px"
+
+  }
+</script>
+
+<script>
+  function closeNav2() {
+      document.getElementById("closebtn").style.display = "none"
+      document.getElementById("menu").style.marginLeft = "-820px";
+  }
+
+
+  
+</script>
+
+
+
+
+
+<script>
+
+
+  $(".hover").mouseleave(
+      function () {
+          $(this).removeClass("hover");
+      }
+  );
+
+</script>
+
+
+<!-- ============================================ SIDE NAV BAR ============================================ -->
+
+
+<script>
+
+  function back() {
+
+      window.location = "./index.html"
+
+  }
+
+  function openNav() {
+      document.getElementById("mySidenav").style.display = "block";
+      document.getElementById("closeic").style.display = "block";
+
+  }
+
+  function openNav1() {
+      document.getElementById("mySidenav1").style.display = "block";
+      document.getElementById("closeic1").style.display = "block";
+  }
+
+  function closeNav() {
+      document.getElementById("mySidenav").style.border = "0px solid #B8860B";
+      document.getElementById("mySidenav").style.display = "none";
+      document.getElementById("closeic").style.display = "none";
+  }
+
+  function closeNav1() {
+      document.getElementById("mySidenav1").style.border = "0px solid #B8860B";
+      document.getElementById("mySidenav1").style.display = "none";
+      document.getElementById("closeic1").style.display = "none";
+  }
+
+</script>
+
+  
+
+
+  <!-- ============================================ MENU ACTIVE ============================================ -->
+
+
+  <!-- <script>
+
+    var btnContainer = document.getElementById("menu");
+
+    var btns = btnContainer.getElementsByClassName("btns");
+
+    console.log(btns)
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].addEventListener("click", function () {
+        var current = document.getElementsByClassName("active1");
+        current[0].className = current[0].className.replace(" active1", "");
+        this.className += " active1";
+        console.log(current)
+      });
+    }
+
+
+
+  </script> -->
+
+
+
+  <!-- <script>
+
+    function profile() {
+
+      document.getElementById("profile").style.display = "block"
+
+    }
+
+
+    window.addEventListener('scroll', function () {
+      var header = document.querySelector('.headermain');
+
+      if (window.scrollY > 0) {
+        header.classList.add('scrolled');
+      }
+
+
+      else {
+        header.classList.remove('scrolled');
+      }
+    });
+
+
+  </script> -->
+
+
+  <!-- <script>
+    async function logoutbtn() {
+
+      console.log("Test");
+      const email = localStorage.getItem("email1");
+      const data = { email };
+      console.log(data);
+      const response = await fetch("https://newtiles-env.eba-mdsv5qca.ap-south-1.elasticbeanstalk.com/users/logout", {
+        credentials: 'same-origin',
+        method: 'POST',
+        redirect: 'follow',
+        body: JSON.stringify(data),
+        headers: { 'Content-Type': 'application/json' },
+      });
+      response.json().then(() => {
+
+        localStorage.clear();
+        window.location = "./index.html";
+
+      }).catch((err) => {
+        console.log(err);
+      });
+
+    }
+  </script> -->
+
+  <!-- ============================================ RESPONSIVE MENU FUNCTION ============================================ -->
+
+
+  <!-- <script>
+    function clicks() {
+      console.log("jabez")
+      document.getElementById("closebtn").style.display = "block"
+      document.getElementById("menu").style.marginLeft = "0px"
+
+    }
+  </script>
+
+  <script>
+    function closeNav() {
+      document.getElementById("closebtn").style.display = "none"
+      document.getElementById("menu").style.marginLeft = "-860px";
+    }
+  </script> -->
+
+  <!-- <script src="assets/js/main.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/js/bootstrap.bundle.min.js"></script> -->
+      <!-- ALL JS FILES -->
+      <script src="js/all.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+  
+      <script src="js/custom.js"></script>
+  
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <script src="./Mainjavascript/index.js"></script>
+
+
+</body>
+</html>

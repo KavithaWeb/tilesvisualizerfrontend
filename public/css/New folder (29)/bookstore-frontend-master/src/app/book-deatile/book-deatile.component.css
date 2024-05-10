@@ -1,0 +1,18 @@
+
+
+.nex-btn, .pre-btn{
+    background-color: black; height: 60px;
+}
+
+.nex-btn{
+    border-radius: 5px 0px 0 5px;
+}
+
+.pre-btn {
+    border-radius: 0px 5px 5px 0px;
+}
+
+.sticky-img {
+    position: sticky;
+    top: 6em;
+}
